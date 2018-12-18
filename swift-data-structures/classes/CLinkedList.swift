@@ -18,7 +18,7 @@ class LinkedNode<Value> {
     }
 }
 
-class LinkedList<Value> {
+class CLinkedList<Value> {
     var root: LinkedNode<Value>?
     var tail: LinkedNode<Value>?
     
@@ -104,7 +104,7 @@ class LinkedList<Value> {
     
 }
 
-extension LinkedList: CustomStringConvertible {
+extension CLinkedList: CustomStringConvertible {
     
     public var description: String {
         var node = root

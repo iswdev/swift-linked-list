@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE09479F21C89366008E02A0 /* Eratosthenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09479E21C89366008E02A0 /* Eratosthenes.swift */; };
+		CE18AA8121C205AF0036AE7A /* list_utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18AA8021C205AF0036AE7A /* list_utils.swift */; };
+		CE18AA8621C20F8E0036AE7A /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18AA8521C20F8E0036AE7A /* BinaryTree.swift */; };
+		CE18AA8821C2108C0036AE7A /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18AA8721C2108C0036AE7A /* TreeNode.swift */; };
 		CE19474621B7734D005E9D71 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19474521B7734D005E9D71 /* main.swift */; };
-		CE19474D21B77394005E9D71 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19474C21B77394005E9D71 /* LinkedList.swift */; };
+		CE19474D21B77394005E9D71 /* CLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19474C21B77394005E9D71 /* CLinkedList.swift */; };
+		CE4D090221C353490001B8B8 /* Palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D090121C353490001B8B8 /* Palindrome.swift */; };
 		CE5699E321B8D3E90065D222 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5699E221B8D3E90065D222 /* Stack.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,9 +30,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE09479E21C89366008E02A0 /* Eratosthenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eratosthenes.swift; sourceTree = "<group>"; };
+		CE18AA8021C205AF0036AE7A /* list_utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = list_utils.swift; sourceTree = "<group>"; };
+		CE18AA8521C20F8E0036AE7A /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		CE18AA8721C2108C0036AE7A /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		CE19474221B7734D005E9D71 /* swift-data-structures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "swift-data-structures"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE19474521B7734D005E9D71 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		CE19474C21B77394005E9D71 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		CE19474C21B77394005E9D71 /* CLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLinkedList.swift; sourceTree = "<group>"; };
+		CE4D090121C353490001B8B8 /* Palindrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palindrome.swift; sourceTree = "<group>"; };
 		CE5699E221B8D3E90065D222 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +52,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE18AA7F21C205700036AE7A /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				CE19474C21B77394005E9D71 /* CLinkedList.swift */,
+				CE5699E221B8D3E90065D222 /* Stack.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		CE18AA8221C20F520036AE7A /* structs */ = {
+			isa = PBXGroup;
+			children = (
+				CE18AA8521C20F8E0036AE7A /* BinaryTree.swift */,
+				CE18AA8721C2108C0036AE7A /* TreeNode.swift */,
+			);
+			path = structs;
+			sourceTree = "<group>";
+		};
 		CE19473921B7734C005E9D71 = {
 			isa = PBXGroup;
 			children = (
@@ -61,11 +89,22 @@
 		CE19474421B7734D005E9D71 /* swift-data-structures */ = {
 			isa = PBXGroup;
 			children = (
-				CE19474C21B77394005E9D71 /* LinkedList.swift */,
+				CE4D090021C353060001B8B8 /* algotithms */,
+				CE18AA8221C20F520036AE7A /* structs */,
+				CE18AA7F21C205700036AE7A /* classes */,
+				CE18AA8021C205AF0036AE7A /* list_utils.swift */,
 				CE19474521B7734D005E9D71 /* main.swift */,
-				CE5699E221B8D3E90065D222 /* Stack.swift */,
 			);
 			path = "swift-data-structures";
+			sourceTree = "<group>";
+		};
+		CE4D090021C353060001B8B8 /* algotithms */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D090121C353490001B8B8 /* Palindrome.swift */,
+				CE09479E21C89366008E02A0 /* Eratosthenes.swift */,
+			);
+			path = algotithms;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE19474D21B77394005E9D71 /* LinkedList.swift in Sources */,
+				CE19474D21B77394005E9D71 /* CLinkedList.swift in Sources */,
 				CE5699E321B8D3E90065D222 /* Stack.swift in Sources */,
+				CE09479F21C89366008E02A0 /* Eratosthenes.swift in Sources */,
+				CE4D090221C353490001B8B8 /* Palindrome.swift in Sources */,
+				CE18AA8621C20F8E0036AE7A /* BinaryTree.swift in Sources */,
+				CE18AA8821C2108C0036AE7A /* TreeNode.swift in Sources */,
+				CE18AA8121C205AF0036AE7A /* list_utils.swift in Sources */,
 				CE19474621B7734D005E9D71 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

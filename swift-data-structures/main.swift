@@ -5,119 +5,24 @@
 //  Created by User on 2018-12-04.
 //  Copyright © 2018 User. All rights reserved.
 //
-
 import Foundation
-
-// Fill with `count` random numbers
-func fill(list: LinkedList<Int>, count: Int){
-    for _ in 0...count {
-        let number = Int.random(in: 1 ..< 100)
-        list.append(number)
-    }
-}
-
-// Fill with `count` sorted random numbers
-func fillSorted(list: LinkedList<Int>, count: Int){
-    var number = 1
-    for _ in 0...count {
-        number = Int.random(in: number ..< number + 20 )
-        list.append(number)
-    }
-}
-
-// Merge 2 sorted lists 
-func mergeSorted(_ list1:LinkedList<Int>, with list2: LinkedList<Int>) -> LinkedList<Int>{
-    let result = LinkedList<Int>()
-    var pointer1 = list1.root
-    var pointer2 = list2.root
-    while(true){
-        if let value1 = pointer1 {
-            if let value2 = pointer2 {
-                let val1 = value1.value
-                let val2 = value2.value
-                if val1 <= val2 {
-                    result.append(value1.value)
-                    pointer1 = pointer1?.next
-                }else{
-                    result.append(value2.value)
-                    pointer2 = pointer2?.next
-                }
-            }else{
-                result.append(value1.value)
-                pointer1 = pointer1?.next
-            }
-        }else if let value2 = pointer2 {
-            result.append(value2.value)
-            pointer2 = pointer2?.next
-        }else{
-            break
-        }
-    }
-    return result
-}
-
-func removeWithValue(list: LinkedList<Int>, value: Int){
-    var currentNode = list.root
-    while let node = currentNode {
-        currentNode = currentNode?.next
-        if node.value == value {
-            list.remove(node: node)
-        }
-    }
-}
-
-
-func checkParenthesis(text: String) -> Bool{
-    let stack = Stack<Character>()
-    for char in text {
-        if char == "(" {
-            stack.push(char)
-        }
-        if char == ")" {
-            if let _ = stack.pop(){
-                
-            }else{
-                return false
-            }
-        }
-    }
-    if let _ = stack.pop(){
-        // elements left
-        return false
-    }else{
-        // empty stack
-        return true
-    }
-}
-
-
-
 
 var listCount = 10
 
-var listA = LinkedList<Int>()
+var listA = CLinkedList<Int>()
 fill(list: listA, count: listCount)
 
 // Normal list print
 print("print List A: ", listA)
 
 
-
-
-
 // 1.- Reversed list
 listA.printReverse()
 
 
-
-
-
 // 2.- Middle node
-
 var middle = listA.middleNode()
 print("Middle node in List A: \(middle!.value)")
-
-
 
 
 // 3.- Reversed
@@ -125,12 +30,10 @@ listA.reverseList()
 print("List A Reversed:" , listA)
 
 
-
-
 // 4.- Merge sorted
-let listB = LinkedList<Int>()
+let listB = CLinkedList<Int>()
 fillSorted(list: listA, count: listCount)
-let listC = LinkedList<Int>()
+let listC = CLinkedList<Int>()
 fillSorted(list: listB, count: listCount)
 print("List B",listB)
 print("List C",listC)
@@ -189,4 +92,33 @@ if (checkParenthesis(text: check4)){
 }
 
 
+
+// TREE Excercises
+
+var root = TreeNode<Int>(value:15)
+root.add(1).add([1,5,0])
+root.add(17).add(2)
+root.add(20).add([5,7])
+
+print(root.descriptionByLevels)
+
+
+
+// Palindrome
+let words=[
+    "EteraretE",
+    "EterretE",
+    "EterretEX",
+    "E5terretE"
+]
+for word in words{
+    if (isPalindrome(word)){
+        print("\(word) is Palindrome")
+    }else{
+        print("\(word) is not Palindrome")
+    }
+}
+
+let numbers=primeNumbers(max:120)
+print("Prime numbers until :\(numbers)")
 
